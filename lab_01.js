@@ -1,6 +1,6 @@
-// learning 
+// learning example
 
-const ex_list = [100, 70, 45, 50];
+const ex_list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
 function insertionSort(ex_list) {
     const n = ex_list.length;
