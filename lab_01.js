@@ -1,22 +1,31 @@
-// learning example
 
-const ex_list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+// const example_list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-function insertionSort(ex_list) {
-    const n = ex_list.length;
+//trying to put a random number generator into a 10 element list
+const array  = Array.from({length: 20}, () => Math.floor(Math.random() * 20));
+console.log(array);
+
+
+function insertionSort(array) {
+    const n = array.length;
         for (let i = 1; i < n; i++) {
-            let current = ex_list[i];
+            let current = array[i];
             let j = i-1;
-            while((j > - 1) && (current < ex_list[j])) {
-                ex_list[j + 1] = ex_list[j];
+            while((j > - 1) && (current < array[j])) {
+                array[j + 1] = array[j];
                 j--;
             }
-            ex_list[j+1] = current;
+            array[j+1] = current;
         }
-    return ex_list;
+    return array;
 }
 
+insertionSort(array);
+console.log(array);
 
 
-insertionSort(ex_list);
-console.log(ex_list);
+
+
+
+
+
