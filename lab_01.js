@@ -1,18 +1,11 @@
 
-const element = 10
+
 const array = [];
 
-
-//array of random numbers (not repeating)
-do {
-    const randomNumber = Math.floor(Math.random() * 100) + 1
-    if (!array.includes(randomNumber)) {
-        array.push(randomNumber);
-    }
-
-} while (array.length < element);
+for(let i = 0, j = 10; i < j; i++) {
+    array.push(Math.round(Math.random() * 100))
+}
 console.log(array)
-
 
 
 function insertionSort(array) {
@@ -24,7 +17,6 @@ function insertionSort(array) {
         }
     }
 }
-
 
 
 const start = Date.now()
