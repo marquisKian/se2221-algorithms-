@@ -1,13 +1,9 @@
 
-
-// const array = [5, 6, 7, 8, 9, 10];
 const element = 10
 const array = [];
 
-if(element == 0) {
-    console.log(null)
-}
 
+//array of random numbers (not repeating)
 do {
     const randomNumber = Math.floor(Math.random() * 100) + 1
     if (!array.includes(randomNumber)) {
@@ -16,7 +12,6 @@ do {
 
 } while (array.length < element);
 console.log(array)
-//array of random numbers (not repeating)
 
 
 
@@ -29,6 +24,8 @@ function insertionSort(array) {
         }
     }
 }
+
+
 
 const start = Date.now()
 insertionSort(array);
