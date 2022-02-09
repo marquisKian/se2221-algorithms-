@@ -36,3 +36,17 @@ const merge = (left, right) => {
 };
 
 
+const start = Date.now()
+const sorted = mergeSort(array);
+const end = Date.now()
+console.log(sorted);
+
+const rev = sorted.reverse();
+console.log(rev);
+
+const sorted_rev = mergeSort(rev);
+console.log(sorted_rev);
+
+
+
+console.log('elapsed', (end - start) / 60_000)
