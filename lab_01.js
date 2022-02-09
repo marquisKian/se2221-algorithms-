@@ -1,11 +1,10 @@
 
-
 const array = [];
 
 for(let i = 0, j = 10; i < j; i++) {
     array.push(Math.round(Math.random() * 100))
 }
-console.log(array)
+console.log('unsorted list: ', array)
 
 
 function insertionSort(array) {
@@ -19,10 +18,21 @@ function insertionSort(array) {
 }
 
 
+
+//sorted array
 const start = Date.now()
 insertionSort(array);
 const end = Date.now()
-console.log(array);
+console.log('sorted list:   ', array);
+
+
+//reversed the sorted array 
+const reverse_list = array.reverse( );
+console.log(reverse_list);
+
+//sorted the reversed array
+insertionSort(reverse_list);
+console.log(reverse_list);
 
 console.log('elapsed', (end - start) / 60_000)
 
