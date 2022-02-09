@@ -6,7 +6,7 @@ for(let i = 0, j = 10; i < j; i++) {
 console.log(array)
 
 
-const mergeSort = array => {
+function mergeSort(array) {
     if(array.length < 2) {
         return array;
     }
@@ -16,7 +16,7 @@ const mergeSort = array => {
     return merge(mergeSort(left), mergeSort(right));
 };
 
-const merge = (left, right) => {
+function merge (left, right) {
     const result = [];
     while (left.length && right.length) {
         if (left[0] <= right[0]) {
